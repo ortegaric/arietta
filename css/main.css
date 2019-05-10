@@ -1,0 +1,312 @@
+/*
+  =======================================
+  CSS Reset
+  =======================================
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+  =======================================
+  CSS Variables (colors)
+  =======================================
+*/
+:root {
+  --blue-1: rgb(37, 182, 209);
+  --blue-2: rgb(132, 210, 226);
+  --blue-3: rgb(0, 148, 176);
+  --blue-4: rgb(102, 202, 216);
+  --dark: #424242;
+	--light: #e6e6e6;
+	--lighter: #f2f2f2;
+	--white: #fff;
+	--red: rgb(255,69,69);
+}
+
+/*
+  =======================================
+  Global Styles
+  =======================================
+*/
+html * {box-sizing: border-box;}
+body * {font-family: "Maven Pro", sans-serif;}
+body {color: var(--dark);}
+span {color: var(--blue-1); font-weight: 600;}
+strong {font-size: 1.2rem; font-weight: 600;}
+a {
+	color: var(--blue-1);
+	text-decoration: none;
+	transition: background-color .2s, opacity .2s;
+}
+
+/*
+  =======================================
+  Main Layout
+  =======================================
+*/
+.hidden {display: none;}
+.btn {
+	color: var(--white);
+	background-color: var(--red);
+  border: none;
+	border-radius: 3px;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+	transition: box-shadow .2s;
+}
+.btn:hover {box-shadow: 0 2px 5px rgba(0,0,0,.26);}
+
+/*
+  =======================================
+  Mobile Layout
+  =======================================
+*/
+h1, h2, h3, h4 {font-size: 1.5rem;}
+h1, h2, h3, h4, p {margin-bottom: 1rem;}
+p {font-size: 1rem; line-height: 1.3rem;}
+
+.c {margin: auto; width: 90vw;}
+.g-3 {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: 1fr 2fr 1fr;
+}
+.g-3 > * {grid-column: 2;}
+.m {margin: 2rem auto;}
+
+/* Header, menu */
+.logo {border-radius: 3px; width: 2rem;}
+.menu {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+}
+.menu li {padding-right: 1.4rem;}
+.menu li:first-child {margin-right: auto;}
+.desk {display: none;}
+
+/* Hero */
+.hero {margin-top: 2rem;}
+.hero .btn {display: inline-block; margin: 1rem auto;}
+
+/* Imagem */
+.imagem {
+  background-color: var(--white);
+  background-image: url("../imagens/hero.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+/* O que fazemos  */
+.service {
+	border: 1px solid var(--light);
+	border-radius: 3px;
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
+.service h3 {color: var(--blue-1);}
+.service a {
+  border-radius: 3px;
+  color: var(--red);
+  padding: .2rem .5rem;
+}
+
+/* Quotes  */
+.quotes {
+	background-color: var(--blue-3);
+	color: var(--white);
+	padding: 1rem 2rem;
+	text-align: center;
+}
+
+/* Quem desenvolve */
+.about-us {
+	border: 1px solid var(--light);
+	border-radius: 3px;
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
+.about-us > img {
+	border-radius: 3px;
+	box-shadow: 1px 1px 4px var(--dark);
+	margin-bottom: 1rem;
+  max-width: 50%;
+}
+.about-us ul {display: flex; padding-bottom: 1rem;}
+.about-us li {padding-right: 1rem;}
+.about-us a {font-size: 1.3rem;}
+
+/* Gratidão */
+.thanks {
+	background-color: var(--blue-3);
+	color: var(--white);
+	padding: 1rem 0;
+}
+
+/* Registro */
+input {
+	border: 1px solid var(--light);
+	border-radius: 3px;
+	display: block;
+	font-size: 1.2rem;
+	margin: .5rem 0;
+	padding: 1rem .5rem;
+	width: 100%
+}
+
+/* Contatos */
+#contacts {
+	background-color: var(--blue-3);
+	color: var(--white);
+	padding: 2rem 0;
+}
+#contacts ul {margin-bottom: 1rem;}
+#contacts li {padding-bottom: .5rem;}
+#contacts a {
+	color: var(--white);
+	padding-top: .5rem;
+}
+#contacts p > a {
+	font-size: 2rem;
+}
+.menu-social > * {
+	display: inline-block;
+	padding-right: 1rem;
+}
+.menu-social a {
+	font-size: 2rem;
+}
+
+/* Footer */
+.footer {
+	background-color: var(--lighter);
+}
+.footer img {
+	display: block;
+	width: 100%;
+	margin: auto;
+}
+.footer small {
+	display: block;
+	font-size: .9rem;
+	text-align: right;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+}
+
+/*
+  =======================================
+  Desktop Layout
+  =======================================
+*/
+@media only screen and (min-width: 540px) {
+
+	.c {margin: auto; width: 70vw;}
+	.m {margin: 6rem auto;}
+	.g-2a {
+		display: grid;
+		grid-gap: 4rem;
+		grid-template-columns: 2fr 2fr;
+	}
+	.g-2b {
+		display: grid;
+		grid-gap: 2rem;
+		grid-template-columns: 1fr 2fr;
+	}
+
+	h1, h2, {
+		font-weight: 600;
+		margin-bottom: 2rem;
+	}
+	h1 {font-size: 3rem;}
+	h2 {font-size: 2rem;}
+	h3 {font-size: 1.8rem;}
+	h4 {font-size: 2rem;}
+	p {
+		font-size: 1.1rem;
+		line-height: 1.8rem;
+		margin-bottom: 1rem;
+	}
+
+	/* Header, menu */
+	.logo {width: 3rem;}
+	.menu {height: 6rem; justify-content: space-between;}
+	.menu a:hover {opacity: 0.7;}
+	.desk {display: block;}
+	.mobi {display: none;}
+
+	/* Hero */
+	.hero {margin-top: 4rem;}
+	.hero h2 {font-size: 3rem; padding-bottom: 2rem;}
+	.hero p {font-size: 1.4rem; padding-bottom: 2rem;}
+
+	/* O que fazemos */
+	.service {transition: box-shadow .2s;}
+	.service:hover {box-shadow: 0 2px 5px rgba(0,0,0,.26);}
+	.service a:hover {background-color: var(--lighter);}
+
+	/* Quotes  */
+	.quotes {padding: 3rem 2rem;}
+
+	/* Quem desenvolve */
+	.who > p {font-size: 1.3rem; padding-bottom: 2rem;}
+	.about-us {padding: 2rem;}
+	.about-us > img {max-width: 12rem;}
+	.about-us a {font-size: 1.3rem;}
+	.about-us a:hover {opacity: .7;}
+
+	/* Gratidão  */
+	.thanks {padding: 2rem 0;}
+	.thanks h4 {padding-bottom: 2rem;}
+	.thanks p {font-size: 1.3rem;}
+
+	/* Contatos */
+	#contacts {padding: 4rem 0;}
+	#contacts p {padding-bottom: 2rem;}
+	#contacts a:hover {opacity: .7;}
+
+	/* Footer */
+	.footer img {width: 25%;}
